@@ -1,16 +1,21 @@
 """
+Operators:
+
+Operators are special symbols or words used in programming to perform operations
+on values or variables.
+
 1. Arithmetic Operators
 
 Used for mathematical calculations.
 
-Operator	Meaning	
-+	        Addition (Adds two numbers together)
--	        Subtraction	(Subtracts the second number from the first)
-*	        Multiplication (Multiplies two numbers)
-/	        Division (Divides the first number by the second and gives the full answer with decimals)
-//	        Floor Division (Divides two numbers but chops off the decimal part to give you just the whole number)	
-%	        Modulus (Divides two numbers and gives you only the leftover remainder)
-**          Exponent (Raises the first number to the power of the second (e.g., Square of 5))
+Operator	                   Meaning	
++	                           Addition (Adds two numbers together)
+-	                           Subtraction	(Subtracts the second number from the first)
+*	                           Multiplication (Multiplies two numbers)
+/	                           Division (Divides the first number by the second and gives the full answer with decimals)
+Double forward slash(//)       Floor Division (Divides two numbers but chops off the decimal part to give you just the whole number)	
+%	                           Modulus (Divides two numbers and gives you only the leftover remainder)
+**                             Exponent (Raises the first number to the power of the second (e.g., Square of 5))
 
 """
 
