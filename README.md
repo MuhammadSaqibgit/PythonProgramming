@@ -4,7 +4,7 @@ A comprehensive Python programming repository designed to take you from **beginn
 
 ### 📚 What You'll Learn
 
-* Procedural-Oriented Programming (POP)
+* Python Basics
 * Object-Oriented Programming (OOP)
 
 Whether you're **starting Python from scratch** or looking to strengthen your existing skills, this repository provides a structured path for learning and practicing Python programming.
