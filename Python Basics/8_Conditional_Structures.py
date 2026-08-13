@@ -4,6 +4,8 @@ Conditional Structures (Type of Control Structure):
 A control Structure or a selection structure selects a statement or a 
 set of statements to execute on the basis of conditions.
 
+Types of Conditional Structures:-
+
 1) if Statement:
 
 if statement is a decision making statement. It is used to execute or skip a 
