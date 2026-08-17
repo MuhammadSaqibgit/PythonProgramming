@@ -1,592 +1,551 @@
-============================================================
-INTRODUCTION TO OBJECT-ORIENTED PROGRAMMING (OOP)
-============================================================
+# INTRODUCTION TO OBJECT-ORIENTED PROGRAMMING
 
-1. WHAT IS OBJECT-ORIENTED PROGRAMMING?
-------------------------------------------------------------
+# ============================================================
 
+# 1. WHAT IS OBJECT-ORIENTED PROGRAMMING?
+
+# ============================================================
+
+"""
 Object-Oriented Programming (OOP) is a programming approach in
-which a program is designed around objects and classes.
+which programs are designed using objects.
 
-An object represents an entity and contains:
+An object represents something that contains:
 
-    - Data
-    - Behavior
+1. Data - information or properties.
+2. Behavior - actions that the object can perform.
 
-Data represents the properties or characteristics of an object,
-while behavior represents the actions that the object can perform.
+For example, a Car object can have properties such as:
 
-For example, a Student object may contain:
+* Brand
+* Color
+* Speed
 
-    Data:
-        name
-        age
-        roll_number
+And it can have behaviors such as:
 
-    Behavior:
-        study()
-        attend_class()
-        take_exam()
+* Start
+* Stop
+* Accelerate
 
-Python allows us to represent such entities using classes and
-objects.
+OOP helps us organize large programs by grouping related data
+and functionality together.
+"""
 
+# ============================================================
 
-------------------------------------------------------------
-2. WHAT IS A CLASS?
-------------------------------------------------------------
+# 2. WHY DOES OOP EXIST?
 
-A class is a blueprint or template used to create objects.
+# ============================================================
 
-A class defines what data an object can have and what actions
-the object can perform.
+"""
+As programs become larger, managing all data and functions
+individually can become difficult.
 
-For example, a Student class can define:
+OOP was introduced to provide a structured way to organize
+complex programs.
 
-    - name
-    - age
-    - study()
-    - attend_class()
+Without OOP, a program may contain many separate variables
+and functions that are difficult to manage.
 
-The class is the blueprint. The actual student created from that
-class is an object.
+With OOP, related data and functions can be grouped together
+inside objects.
 
-The detailed implementation of classes and objects is covered in:
+OOP provides several benefits:
 
-    02_Classes_and_Objects.py
+1. Better organization of code.
+2. Code reusability.
+3. Easier maintenance.
+4. Better representation of real-world entities.
+5. Easier management of large programs.
+   """
 
+# Example without OOP:
 
-------------------------------------------------------------
-3. WHAT IS AN OBJECT?
-------------------------------------------------------------
+vehicle_brand = "Toyota"
+vehicle_color = "White"
+vehicle_speed = 80
 
-An object is an instance of a class.
+def start_vehicle():
+print("Vehicle started.")
 
-When an object is created from a class, it gets the structure and
-behavior defined by that class.
+def stop_vehicle():
+print("Vehicle stopped.")
 
-For example:
+print("Brand:", vehicle_brand)
+print("Color:", vehicle_color)
+print("Speed:", vehicle_speed)
 
-    Student class
-          |
-          +----> Saqib
-          |
-          +----> Ahmad
-          |
-          +----> Ali
+start_vehicle()
+stop_vehicle()
 
-Here, Student is the class, while Saqib, Ahmad, and Ali can be
-objects created from that class.
+# ============================================================
 
-An object can contain:
+# 3. PROCEDURAL PROGRAMMING
 
-    1. Attributes
-       Data or properties of the object.
+# ============================================================
 
-    2. Methods
-       Functions that define the behavior of the object.
-
-
-------------------------------------------------------------
-4. REAL-WORLD EXAMPLE OF OOP
-------------------------------------------------------------
-
-Consider a CAR.
-
-A car has characteristics such as:
-
-    - Brand
-    - Model
-    - Color
-    - Speed
-
-These are examples of attributes.
-
-A car can perform actions such as:
-
-    - Start
-    - Stop
-    - Accelerate
-    - Brake
-
-These are examples of methods.
-
-In OOP, we can represent this concept using a Car class and
-individual car objects.
-
-Conceptually:
-
-    Class: Car
-
-    Attributes:
-        brand
-        model
-        color
-        speed
-
-    Methods:
-        start()
-        stop()
-        accelerate()
-        brake()
-
-For example:
-
-    Car
-     |
-     +----> Toyota Corolla
-     |
-     +----> Honda Civic
-     |
-     +----> Suzuki Swift
-
-All three objects can be created from the same Car class while
-having different data.
-
-
-------------------------------------------------------------
-5. ANOTHER REAL-WORLD EXAMPLE: STUDENT
-------------------------------------------------------------
-
-Consider a university student.
-
-A Student can have:
-
-    Attributes:
-        name
-        age
-        roll_number
-        semester
-
-    Methods:
-        study()
-        attend_class()
-        submit_assignment()
-        take_exam()
-
-Each student object can contain different information, while
-all objects share the structure and behavior defined by the
-Student class.
-
-
-------------------------------------------------------------
-6. WHY DO WE NEED OOP?
-------------------------------------------------------------
-
-As programs become larger, managing all data and functions can
-become difficult.
-
-OOP helps organize a program by grouping related data and
-behavior together.
-
-For example, instead of keeping student information and
-student-related functions separately, OOP allows us to organize
-them around a Student class.
-
-OOP can make programs easier to:
-
-    - Organize
-    - Understand
-    - Maintain
-    - Reuse
-    - Extend
-
-
-------------------------------------------------------------
-7. PROCEDURAL PROGRAMMING VS OOP
-------------------------------------------------------------
-
+"""
 Procedural programming organizes a program mainly around
 functions and procedures.
 
-OOP organizes a program around objects and classes.
+Data and functions are generally handled separately.
 
-Procedural approach:
+For example, a program can store information about a bank
+account in separate variables and use separate functions
+to perform operations on that data.
 
-    Data
-      |
-      v
-    Functions
-      |
-      v
-    Program
+Procedural programming works well for small and straightforward
+programs.
+"""
 
-Object-oriented approach:
+account_holder = "Ali"
+account_balance = 5000
 
-    Class
-      |
-      +---- Data
-      |
-      +---- Methods
-      |
-      v
-    Objects
+def deposit_money(amount):
+global account_balance
+account_balance += amount
 
-Example of a procedural approach:
+def withdraw_money(amount):
+global account_balance
+account_balance -= amount
 
-    student_name = "Saqib"
-    student_age = 18
+deposit_money(1000)
+withdraw_money(500)
 
-    def display_student(name, age):
-        print(name, age)
+print("Account Holder:", account_holder)
+print("Balance:", account_balance)
 
-In an object-oriented approach, the student data and related
-behavior can be organized inside a Student class.
+# ============================================================
 
-The actual implementation will be covered in later files.
+# 4. OBJECT-ORIENTED PROGRAMMING
 
+# ============================================================
 
-------------------------------------------------------------
-8. MAIN CHARACTERISTICS OF OOP
-------------------------------------------------------------
+"""
+Object-oriented programming groups related data and behavior
+together inside objects.
 
-The major concepts associated with OOP are:
+Instead of keeping account information and account-related
+functions separately, we can create an object that contains
+both.
 
-    1. Classes and Objects
-    2. Encapsulation
-    3. Inheritance
-    4. Polymorphism
-    5. Abstraction
+This makes the program easier to understand and maintain.
+"""
 
-These concepts help programmers build organized and reusable
-software.
+class BankAccount:
+def **init**(self, owner, balance):
+self.owner = owner
+self.balance = balance
 
-They will be studied individually throughout this OOP folder.
+```
+def deposit(self, amount):
+    self.balance += amount
 
+def withdraw(self, amount):
+    self.balance -= amount
+```
 
-------------------------------------------------------------
-9. ENCAPSULATION
-------------------------------------------------------------
+savings_account = BankAccount("Sara", 5000)
 
-Encapsulation means combining related data and methods into a
-single unit, usually a class.
+savings_account.deposit(1000)
+savings_account.withdraw(500)
 
-It also provides a way to control how the internal data of an
-object is accessed or modified.
+print("Account Holder:", savings_account.owner)
+print("Balance:", savings_account.balance)
 
-Conceptually:
+# ============================================================
 
-    Student
-       |
-       +---- name
-       +---- age
-       +---- study()
-       +---- display_info()
+# 5. PROCEDURAL VS OBJECT-ORIENTED PROGRAMMING
 
-The data and behavior related to a student are grouped together.
+# ============================================================
 
-Covered in:
+"""
+Both procedural programming and object-oriented programming
+can solve programming problems.
 
-    10_Encapsulation.py
+The main difference is how the program is organized.
 
+Procedural Programming:
 
-------------------------------------------------------------
-10. INHERITANCE
-------------------------------------------------------------
+* Focuses mainly on functions and procedures.
+* Data and functions are often handled separately.
+* Suitable for small and straightforward programs.
 
-Inheritance allows one class to acquire or reuse properties and
-behavior from another class.
+Object-Oriented Programming:
+
+* Focuses on objects and classes.
+* Related data and behavior are grouped together.
+* Useful for organizing larger and more complex programs.
+
+Simple comparison:
+
+Procedural:
+Data + Functions
+
+Object-Oriented:
+Object = Data + Behavior
+"""
+
+# Procedural approach
+
+product_name = "Keyboard"
+product_price = 2500
+
+def show_product():
+print("Product:", product_name)
+print("Price:", product_price)
+
+show_product()
+
+# Object-oriented approach
+
+class Product:
+def **init**(self, name, price):
+self.name = name
+self.price = price
+
+```
+def display(self):
+    print("Product:", self.name)
+    print("Price:", self.price)
+```
+
+computer_mouse = Product("Computer Mouse", 1800)
+computer_mouse.display()
+
+# ============================================================
+
+# 6. FOUR PILLARS OF OOP
+
+# ============================================================
+
+"""
+Object-Oriented Programming is commonly explained using
+four important concepts called the four pillars of OOP.
+
+They are:
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+These concepts help programmers design organized,
+reusable, and maintainable programs.
+
+We will study each concept in detail in later chapters.
+"""
+
+# ============================================================
+
+# 7. ENCAPSULATION
+
+# ============================================================
+
+"""
+Encapsulation means combining data and the methods that operate
+on that data inside a class.
+
+It also helps control how data can be accessed or modified.
+
+For example, a BankAccount class can contain account information
+and the methods used to deposit or withdraw money.
+
+Detailed discussion of encapsulation will come later.
+"""
+
+# ============================================================
+
+# 8. ABSTRACTION
+
+# ============================================================
+
+"""
+Abstraction means hiding unnecessary implementation details
+and exposing only the important features of an object.
+
+For example, when we drive a car, we use the steering wheel,
+brake, accelerator, and other controls.
+
+We do not need to know every internal detail of the engine
+to drive the car.
+
+Detailed discussion of abstraction will come later.
+"""
+
+# ============================================================
+
+# 9. INHERITANCE
+
+# ============================================================
+
+"""
+Inheritance allows one class to acquire properties and
+behaviors from another class.
+
+For example, a Dog class can inherit common features from
+an Animal class.
+
+This helps reduce code duplication and promotes code reuse.
+
+Detailed discussion of inheritance will come later.
+"""
+
+# ============================================================
+
+# 10. POLYMORPHISM
+
+# ============================================================
+
+"""
+Polymorphism means that the same interface or operation can
+behave differently depending on the object using it.
+
+For example, different animals can have a method called
+make_sound(), but each animal can implement that method
+differently.
+
+Detailed discussion of polymorphism will come later.
+"""
+
+# ============================================================
+
+# 11. REAL-WORLD ANALOGY: CAR AS AN OBJECT
+
+# ============================================================
+
+"""
+OOP becomes easier to understand when we compare programming
+objects with real-world objects.
+
+Consider a Car.
+
+A car has properties:
+
+* Brand
+* Model
+* Color
+* Speed
+
+A car also has behaviors:
+
+* Start
+* Stop
+* Accelerate
+* Brake
+
+In OOP, we can represent a car using a class.
+
+The properties become attributes and the behaviors become
+methods.
+"""
+
+class Car:
+def **init**(self, brand, model, color):
+self.brand = brand
+self.model = model
+self.color = color
+self.speed = 0
+
+```
+def start_engine(self):
+    print(self.brand, self.model, "engine started.")
+
+def accelerate(self, amount):
+    self.speed += amount
+    print("Current speed:", self.speed)
+
+def brake(self):
+    self.speed = 0
+    print("Car stopped.")
+```
+
+family_car = Car("Honda", "Civic", "Black")
+
+print("Brand:", family_car.brand)
+print("Model:", family_car.model)
+print("Color:", family_car.color)
+
+family_car.start_engine()
+family_car.accelerate(40)
+family_car.brake()
+
+# ============================================================
+
+# 12. CLASS AND OBJECT
+
+# ============================================================
+
+"""
+A class is a blueprint or template used to create objects.
+
+An object is an instance of a class.
 
 For example:
 
-    Animal
-       |
-       v
-      Dog
+Class:
+Car
+
+Objects:
+family_car
+sports_car
+electric_car
+
+Each object can have its own data while sharing the structure
+and behavior defined by the class.
+
+We will study classes and objects in detail in the next chapter.
+"""
+
+class MobilePhone:
+def **init**(self, company, model):
+self.company = company
+self.model = model
+
+```
+def show_details(self):
+    print("Company:", self.company)
+    print("Model:", self.model)
+```
+
+phone_one = MobilePhone("Samsung", "Galaxy A55")
+phone_two = MobilePhone("Apple", "iPhone 15")
+
+phone_one.show_details()
+phone_two.show_details()
+
+# ============================================================
+
+# 13. WHY PYTHON IS A GOOD LANGUAGE FOR LEARNING OOP
+
+# ============================================================
 
-Dog can inherit characteristics and behavior from Animal and can
-also have its own additional behavior.
+"""
+Python is a good language for learning Object-Oriented
+Programming because its syntax is simple and readable.
 
-Inheritance is useful for code reuse and creating relationships
-between classes.
+Python provides direct support for important OOP concepts
+such as:
 
-Covered in:
+1. Classes and objects.
+2. Instance and class variables.
+3. Instance methods.
+4. Class methods.
+5. Static methods.
+6. Encapsulation.
+7. Inheritance.
+8. Polymorphism.
+9. Abstraction.
+10. Magic methods.
+11. Properties and decorators.
+12. Dataclasses.
+
+Python allows beginners to focus on understanding OOP concepts
+without dealing with a large amount of complicated syntax.
+
+At the same time, Python's OOP features are powerful enough
+to build real-world applications.
+"""
+
+# ============================================================
+
+# 14. WHAT WE WILL LEARN IN THIS FOLDER
+
+# ============================================================
+
+"""
+This Object Oriented Programming folder will gradually cover
+the important concepts required to understand OOP in Python.
+
+The learning path is:
+
+1. Introduction to OOP
+2. Classes and Objects
+3. self Parameter
+4. Constructors
+5. Instance and Class Variables
+6. Methods
+7. Class Methods
+8. Static Methods
+9. Properties and Getters/Setters
+10. Access Modifiers
+11. Encapsulation
+12. Inheritance
+13. Types of Inheritance
+14. Method Resolution Order
+15. Method Overriding
+16. super() Function
+17. Polymorphism
+18. Duck Typing
+19. Abstraction
+20. Abstract Classes and Methods
+21. Magic Methods
+22. Operator Overloading
+23. Composition vs Inheritance
+24. Association and Aggregation
+25. Class and Method Decorators
+26. Dataclasses
+27. Real-World Mini Project
 
-    12_Inheritance.py
+The topics are arranged from fundamental concepts to more
+advanced and practical OOP techniques.
+"""
 
+# ============================================================
 
-------------------------------------------------------------
-11. POLYMORPHISM
-------------------------------------------------------------
+# 15. OOP LEARNING APPROACH
 
-Polymorphism means "many forms."
+# ============================================================
 
-In OOP, polymorphism allows the same operation or interface to
-work with different types of objects.
+"""
+The upcoming chapters will follow a gradual learning approach.
 
-For example:
+First, we will learn how to create classes and objects.
 
-    Animal
-      |
-      +---- Dog -> speak() -> Bark
-      |
-      +---- Cat -> speak() -> Meow
+Then, we will learn how objects store data and perform actions.
 
-The same method name can produce different behavior depending
-on the object.
+After that, we will explore important OOP principles such as
+encapsulation, inheritance, polymorphism, and abstraction.
 
-Covered in:
+Finally, we will study advanced concepts and apply our knowledge
+to a real-world mini project.
 
-    16_Polymorphism.py
+The goal is not only to memorize OOP terminology but also to
+understand how and why these concepts are used in Python programs.
+"""
 
+# ============================================================
 
-------------------------------------------------------------
-12. ABSTRACTION
-------------------------------------------------------------
+# SUMMARY
 
-Abstraction means hiding unnecessary implementation details and
-showing only the important features to the user.
+# ============================================================
 
-For example, when using a car, a driver uses:
+"""
+Important points:
 
-    - Steering wheel
-    - Accelerator
-    - Brake
+1. OOP is a programming approach based on objects and classes.
+2. Objects contain data and behavior.
+3. OOP helps organize large and complex programs.
+4. Procedural programming mainly focuses on functions and procedures.
+5. OOP groups related data and behavior together.
+6. The four pillars of OOP are Encapsulation, Abstraction,
+   Inheritance, and Polymorphism.
+7. Encapsulation combines data and related behavior and helps
+   control access to data.
+8. Abstraction hides unnecessary implementation details.
+9. Inheritance allows one class to acquire features from another.
+10. Polymorphism allows the same operation or interface to behave
+    differently for different objects.
+11. A class is a blueprint for creating objects.
+12. An object is an instance of a class.
+13. A real-world entity such as a Car can be represented as an
+    object with properties and behaviors.
+14. Python provides simple and powerful support for OOP.
+15. The following chapters will explore Python OOP from basic
+    concepts to advanced topics and a practical mini project.
 
-The driver does not need to know every internal detail of the
-engine to drive the car.
+OOP is an important programming concept because it provides a
+structured way to design, organize, reuse, and maintain code.
+"""
 
-Similarly, software can provide a simple interface while hiding
-complex internal implementation.
-
-Covered in:
-
-    17_Abstraction.py
-
-
-------------------------------------------------------------
-13. ADVANTAGES OF OOP
-------------------------------------------------------------
-
-OOP provides several advantages:
-
-    1. Better organization
-       Related data and behavior can be grouped together.
-
-    2. Code reusability
-       Existing classes and methods can be reused.
-
-    3. Maintainability
-       Large programs can be divided into manageable components.
-
-    4. Scalability
-       New features can be added more systematically.
-
-    5. Data control
-       Encapsulation can help control access to object data.
-
-    6. Real-world modeling
-       Real-world concepts can be represented as objects.
-
-
-------------------------------------------------------------
-14. DISADVANTAGES OF OOP
-------------------------------------------------------------
-
-OOP also has some disadvantages:
-
-    1. It can require more code for small programs.
-
-    2. Beginners may find classes and objects difficult at first.
-
-    3. Poorly designed class structures can make a program
-       unnecessarily complicated.
-
-    4. Designing relationships between many classes can become
-       complex in large systems.
-
-Therefore, OOP should be used when it provides a meaningful
-benefit for the problem being solved.
-
-
-------------------------------------------------------------
-15. WHEN SHOULD YOU USE OOP?
-------------------------------------------------------------
-
-OOP is especially useful when:
-
-    - The program is large.
-    - The program contains many related entities.
-    - Data and behavior need to be organized together.
-    - Code needs to be reused.
-    - The application is expected to grow.
-    - The problem can naturally be represented using objects.
-
-Examples include:
-
-    - Banking systems
-    - E-commerce applications
-    - Management systems
-    - Games
-    - GUI applications
-    - Web applications
-    - Large software systems
-
-OOP is not required for every Python program.
-
-For a small script, simple procedural programming may be easier
-and more appropriate.
-
-
-------------------------------------------------------------
-16. OOP IN PYTHON
-------------------------------------------------------------
-
-Python supports object-oriented programming and provides many
-features for creating and working with classes and objects.
-
-Important Python OOP features include:
-
-    - Classes
-    - Objects
-    - Constructors
-    - Instance variables
-    - Class variables
-    - Methods
-    - self parameter
-    - Class methods
-    - Static methods
-    - Properties
-    - Encapsulation
-    - Inheritance
-    - Method overriding
-    - Polymorphism
-    - Abstraction
-    - Magic methods
-    - Operator overloading
-    - Composition
-    - Association
-    - Aggregation
-    - Class decorators
-    - Method decorators
-
-Each concept will be explained with Python code in the following
-files.
-
-
-------------------------------------------------------------
-17. BASIC OOP LEARNING PATH
-------------------------------------------------------------
-
-The recommended order for learning this OOP section is:
-
-    Introduction to OOP
-            |
-            v
-    Classes and Objects
-            |
-            v
-    Constructors
-            |
-            v
-    Instance and Class Variables
-            |
-            v
-    Methods
-            |
-            v
-    self Parameter
-            |
-            v
-    Class Methods / Static Methods / Properties
-            |
-            v
-    Encapsulation
-            |
-            v
-    Access Modifiers
-            |
-            v
-    Inheritance
-            |
-            v
-    Types of Inheritance
-            |
-            v
-    Method Overriding
-            |
-            v
-    super() Function
-            |
-            v
-    Polymorphism
-            |
-            v
-    Abstraction
-            |
-            v
-    Magic Methods
-            |
-            v
-    Operator Overloading
-            |
-            v
-    Composition / Association / Aggregation
-            |
-            v
-    Class and Method Decorators
-
-This order moves from basic concepts to more advanced OOP
-features.
-
-
-------------------------------------------------------------
-18. IMPORTANT TERMS TO REMEMBER
-------------------------------------------------------------
-
-Class
-    A blueprint or template used to create objects.
-
-Object
-    An instance of a class.
-
-Attribute
-    Data or property associated with an object.
-
-Method
-    A function defined inside a class that represents behavior.
-
-Constructor
-    A special method used to initialize an object.
-
-Encapsulation
-    Combining related data and behavior and controlling access
-    to internal data.
-
-Inheritance
-    Creating a new class based on an existing class.
-
-Polymorphism
-    Allowing the same interface or operation to have different
-    behavior for different objects.
-
-Abstraction
-    Hiding unnecessary implementation details and exposing
-    essential features.
-
-
-------------------------------------------------------------
-19. CONCLUSION
-------------------------------------------------------------
-
-Object-Oriented Programming is a programming approach based on
-classes and objects.
-
-The basic idea is to combine related data and behavior into
-organized units.
-
-Python provides extensive support for OOP, from simple classes
-and objects to advanced concepts such as inheritance,
-polymorphism, abstraction, magic methods, and class relationships.
-
-The next step is to learn how classes and objects are actually
-created and used in Python.
-
-Next file:
-
-    02_Classes_and_Objects.py
-
-
-============================================================
-END OF INTRODUCTION TO OBJECT-ORIENTED PROGRAMMING
-============================================================
+END OF CHAPTER 1: INTRODUCTION TO OBJECT-ORIENTED PROGRAMMING
