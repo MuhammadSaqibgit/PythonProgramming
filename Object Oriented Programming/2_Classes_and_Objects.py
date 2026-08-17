@@ -107,7 +107,7 @@ After creating a class, we can create objects from that class.
 
 Syntax:
 
-object_name = ClassName()
+object_name=ClassName()
 
 The parentheses () are used to create an object from the class.
 
@@ -116,7 +116,7 @@ For example:
 class Camera:
     pass
 
-camera_item = Camera()
+camera_item=Camera()
 
 Here:
 
@@ -132,9 +132,9 @@ class Camera:
     pass
 
 
-camera_item = Camera()
+camera_item=Camera()
 
-print("Camera object:", camera_item)
+print("Camera object:",camera_item)
 
 
 # ============================================================
@@ -156,9 +156,9 @@ class Laptop:
     pass
 
 
-office_laptop = Laptop()
+office_laptop=Laptop()
 
-print("Laptop object:", office_laptop)
+print("Laptop object:",office_laptop)
 
 
 # ============================================================
@@ -194,11 +194,11 @@ class Book:
     pass
 
 
-science_book = Book()
-history_book = Book()
+science_book=Book()
+history_book=Book()
 
-print("Science book:", science_book)
-print("History book:", history_book)
+print("Science book:",science_book)
+print("History book:",history_book)
 
 
 # ============================================================
@@ -222,13 +222,13 @@ class Employee:
     pass
 
 
-employee_one = Employee()
-employee_two = Employee()
-employee_three = Employee()
+employee_one=Employee()
+employee_two=Employee()
+employee_three=Employee()
 
-print("Employee One:", employee_one)
-print("Employee Two:", employee_two)
-print("Employee Three:", employee_three)
+print("Employee One:",employee_one)
+print("Employee Two:",employee_two)
+print("Employee Three:",employee_three)
 
 
 # ============================================================
@@ -249,13 +249,13 @@ class Player:
     pass
 
 
-player_alpha = Player()
-player_beta = Player()
+player_alpha=Player()
+player_beta=Player()
 
-print("Player Alpha:", player_alpha)
-print("Player Beta:", player_beta)
+print("Player Alpha:",player_alpha)
+print("Player Beta:",player_beta)
 
-print("Are both objects the same?", player_alpha is player_beta)
+print("Are both objects the same?",player_alpha is player_beta)
 
 
 # ============================================================
@@ -285,10 +285,10 @@ class Device:
     pass
 
 
-smart_device = Device()
+smart_device=Device()
 
-print("Object:", smart_device)
-print("Object type:", type(smart_device))
+print("Object:",smart_device)
+print("Object type:",type(smart_device))
 
 
 # ============================================================
@@ -308,10 +308,10 @@ class Student:
     pass
 
 
-student_record = Student()
+student_record=Student()
 
-print("Student object:", student_record)
-print("Student object type:", type(student_record))
+print("Student object:",student_record)
+print("Student object type:",type(student_record))
 
 
 # ============================================================
@@ -330,13 +330,13 @@ class Vehicle:
     pass
 
 
-vehicle_one = Vehicle()
-vehicle_two = Vehicle()
-vehicle_three = Vehicle()
+vehicle_one=Vehicle()
+vehicle_two=Vehicle()
+vehicle_three=Vehicle()
 
-print("Vehicle One type:", type(vehicle_one))
-print("Vehicle Two type:", type(vehicle_two))
-print("Vehicle Three type:", type(vehicle_three))
+print("Vehicle One type:",type(vehicle_one))
+print("Vehicle Two type:",type(vehicle_two))
+print("Vehicle Three type:",type(vehicle_three))
 
 
 # ============================================================
@@ -347,9 +347,9 @@ print("Vehicle Three type:", type(vehicle_three))
 A simple way to understand classes and objects is to think
 about a cookie cutter.
 
-Cookie cutter = Class
+Cookie cutter=Class
 
-Cookie = Object
+Cookie=Object
 
 A cookie cutter is a tool or template used to create cookies.
 
@@ -377,13 +377,13 @@ class CookieCutter:
     pass
 
 
-cookie_one = CookieCutter()
-cookie_two = CookieCutter()
-cookie_three = CookieCutter()
+cookie_one=CookieCutter()
+cookie_two=CookieCutter()
+cookie_three=CookieCutter()
 
-print("Cookie One:", cookie_one)
-print("Cookie Two:", cookie_two)
-print("Cookie Three:", cookie_three)
+print("Cookie One:",cookie_one)
+print("Cookie Two:",cookie_two)
+print("Cookie Three:",cookie_three)
 
 
 # ============================================================
@@ -402,9 +402,9 @@ However, each cookie is still a separate object.
 
 In the same way:
 
-Class = Blueprint
+Class=Blueprint
 
-Object = Instance created from the blueprint
+Object=Instance created from the blueprint
 
 One class can therefore be used to create many independent
 objects.
@@ -415,15 +415,15 @@ class StarCookie:
     pass
 
 
-first_cookie = StarCookie()
-second_cookie = StarCookie()
-third_cookie = StarCookie()
+first_cookie=StarCookie()
+second_cookie=StarCookie()
+third_cookie=StarCookie()
 
-print("First cookie:", first_cookie)
-print("Second cookie:", second_cookie)
-print("Third cookie:", third_cookie)
+print("First cookie:",first_cookie)
+print("Second cookie:",second_cookie)
+print("Third cookie:",third_cookie)
 
-print("First cookie type:", type(first_cookie))
+print("First cookie type:",type(first_cookie))
 
 
 # ============================================================
@@ -443,7 +443,7 @@ For example:
 class Television:
     pass
 
-living_room_tv = Television()
+living_room_tv=Television()
 
 Here:
 
@@ -461,11 +461,11 @@ class Television:
     pass
 
 
-living_room_tv = Television()
+living_room_tv=Television()
 
-print("Class:", Television)
-print("Object:", living_room_tv)
-print("Object type:", type(living_room_tv))
+print("Class:",Television)
+print("Object:",living_room_tv)
+print("Object type:",type(living_room_tv))
 
 
 # ============================================================
@@ -496,13 +496,13 @@ class Car:
     pass
 
 
-red_car = Car()
-blue_car = Car()
-green_car = Car()
+red_car=Car()
+blue_car=Car()
+green_car=Car()
 
-print("Red car:", red_car)
-print("Blue car:", blue_car)
-print("Green car:", green_car)
+print("Red car:",red_car)
+print("Blue car:",blue_car)
+print("Green car:",green_car)
 
 
 # ============================================================
@@ -528,13 +528,13 @@ class Backpack:
     pass
 
 
-travel_bag = Backpack()
-school_bag = Backpack()
+travel_bag=Backpack()
+school_bag=Backpack()
 
-print("Travel bag ID:", id(travel_bag))
-print("School bag ID:", id(school_bag))
+print("Travel bag ID:",id(travel_bag))
+print("School bag ID:",id(school_bag))
 
-print("Are they the same object?", travel_bag is school_bag)
+print("Are they the same object?",travel_bag is school_bag)
 
 
 # ============================================================
@@ -558,16 +558,16 @@ class Animal:
     pass
 
 
-animal_one = Animal()
-animal_two = Animal()
+animal_one=Animal()
+animal_two=Animal()
 
-print("Animal One:", animal_one)
-print("Animal Two:", animal_two)
+print("Animal One:",animal_one)
+print("Animal Two:",animal_two)
 
-print("Animal One type:", type(animal_one))
-print("Animal Two type:", type(animal_two))
+print("Animal One type:",type(animal_one))
+print("Animal Two type:",type(animal_two))
 
-print("Are they the same object?", animal_one is animal_two)
+print("Are they the same object?",animal_one is animal_two)
 
 
 # ============================================================
@@ -588,7 +588,7 @@ Example:
 class House:
     pass
 
-my_house = House()
+my_house=House()
 
 Here:
 
@@ -608,11 +608,11 @@ class House:
     pass
 
 
-my_house = House()
+my_house=House()
 
-print("Class:", House)
-print("Object:", my_house)
-print("Object type:", type(my_house))
+print("Class:",House)
+print("Object:",my_house)
+print("Object type:",type(my_house))
 
 
 # ============================================================
@@ -674,7 +674,7 @@ Important points:
 5. The 'pass' statement can be used to create an empty class.
 6. An object can be created by calling the class:
 
-   object_name = ClassName()
+   object_name=ClassName()
 
 7. One class can be used to create multiple objects.
 8. Objects created from the same class are separate instances.
