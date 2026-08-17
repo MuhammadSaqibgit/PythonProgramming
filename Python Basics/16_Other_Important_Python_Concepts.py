@@ -277,6 +277,15 @@ class MyError(Exception):
     """Custom Exception."""
     pass
 
+"""
+It's a placeholder you use when Python's syntax requires 
+something to be written (like a body for a class, function, 
+loop, or if-statement), but you don't actually want to write 
+any code there yet.
+
+It is used for declaring a class, and a function.
+"""
+
 age3=0
 
 if(age3<=0):
